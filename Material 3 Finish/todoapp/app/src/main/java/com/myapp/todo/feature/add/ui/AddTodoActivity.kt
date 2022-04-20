@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.widget.doAfterTextChanged
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import com.google.android.material.color.DynamicColors
 import com.google.android.material.textfield.TextInputEditText
 import com.myapp.todo.R
 import com.myapp.todo.feature.add.model.AddTodoViewState
@@ -25,6 +26,7 @@ class AddTodoActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        DynamicColors.applyIfAvailable(this)
         setContentView(R.layout.activity_add_todo)
         setSupportActionBar(toolbar)
         toolbar.navigationIcon = getDrawable(R.drawable.ic_baseline_arrow_back)
